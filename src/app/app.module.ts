@@ -8,6 +8,8 @@ import { firebaseConfig } from './secrets/firebase.config';
 import { AppComponent } from './app/app.component';
 import { LoginModule } from './login/login.module';
 
+import { AppRoutingModule } from './app/app.routing.module';
+
 const myFirebaseAuthConfig = {
   provider: AuthProviders.Password,
   method: AuthMethods.Password
@@ -21,6 +23,7 @@ const myFirebaseAuthConfig = {
     BrowserModule,
     HttpModule,
     LoginModule,
+    AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
   ],
   providers: [],
