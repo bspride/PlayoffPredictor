@@ -3,15 +3,19 @@ import { AngularFire, AuthProviders, AuthMethods } from 'angularfire2';
 
 @Component({
   selector: 'login',
-  templateUrl: './login.component.html'
+  templateUrl: './login.component.html',
+  styleUrls: [ './login.component.css' ]
 })
 export class LoginComponent {
-  constructor(public af: AngularFire) {}
+  model: any = {}
+
+  constructor(public af: AngularFire) {
+  }
 
   login() {
     this.af.auth.login({
-      email: 'email',
-      password: 'pass'
+      email: this.model.username,
+      password: this.model.password
     });
   }
 
