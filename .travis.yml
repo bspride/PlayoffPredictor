@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+  - "6"
+cache:
+  directories:
+    - node_modules #npm packages
+
+branches:
+  only:
+    - development
+  
+before_script:
+  - npm install -g @angular/cli
+
+script:
+  - ng build --prod
+
+deploy:
+  provider: firebase
+  on:
+    branch: development
+  token:
+    secure: "kDii+E+CPeM6KfEk4Gv23cUSgXu+YSGKW37RlYauQnsqw0PU4vClLmYiz6WGW1gf2rUVQrfBEAU/QsjimDONPlO
+PkV8q943B8KAmZrPdJbd0fM8hq3W8dsjAeCsaWZUp1YFAZX7XwbkQQA+/8v22KbSAvkFMAbfsGprJrxv4MOR7AG1QbknuLSPsV
+DBxUQ9Z28tHoDx9ZQBdl62VnMZG4INQro2wkFoXfWctbqtNtffp9x9QUEVakUrAEogAn0cL6zHuGlhmDOt+re0hqNENTNGejFZ
+Zd0CXghuvGJcqciXwVFZpS48swXvlP3fkP6HezJ1+YWECGAwZtPei1Z6HlbelsDQJ777WZfC79ThELbz5i+law2HIlTllTdW2d
+neclrGxVqPVUvsUGGYNKBpSQWjBddLF6g9G+rj2mRulTqqfL5b0qJh/87MROkcpHvrMXmruqZQ1XgIKFLM94iljnWbm9fx6XVx
+fhk6PfeYwruqdblrN1Dix400DM8kGZLh3sD3DWtX42gnUvAfWCNxLgExVIVpwL5ZA8GppyKXNTaO7tWFy7s2dGVAL6lCyGxebw
+rR6TdpMDIkdk8kHnGunDNeEoUEw0m9slByIbhkcz0wSAnDrro/jgDvFpWFr69TjGY/kKzHFMNLD5TwtVjijrAIeKe4n94dYJXJ
+WvOTmRJA="
+

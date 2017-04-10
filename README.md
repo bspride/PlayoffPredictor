@@ -1,5 +1,7 @@
 # PlayoffPredictor
 
+[![Build Status](https://travis-ci.org/bspride/PlayoffPredictor.svg?branch=master)](https://travis-ci.org/bspride/PlayoffPredictor)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## Development server
