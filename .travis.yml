@@ -17,6 +17,8 @@ script:
 
 deploy:
   provider: firebase
+  on:
+    branch: development
   token:
     secure: "kDii+E+CPeM6KfEk4Gv23cUSgXu+YSGKW37RlYauQnsqw0PU4vClLmYiz6WGW1gf2rUVQrfBEAU/QsjimDONPlO
 PkV8q943B8KAmZrPdJbd0fM8hq3W8dsjAeCsaWZUp1YFAZX7XwbkQQA+/8v22KbSAvkFMAbfsGprJrxv4MOR7AG1QbknuLSPsV
