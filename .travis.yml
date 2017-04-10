@@ -7,7 +7,7 @@ cache:
 
 branches:
   only:
-    -development #will change eventually
+    - development
   
 before_script:
   - npm install -g @angular/cli
