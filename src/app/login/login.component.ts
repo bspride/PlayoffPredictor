@@ -19,6 +19,13 @@ export class LoginComponent {
     });
   }
 
+  register() {
+    this.af.auth.createUser({
+      email: this.model.username,
+      password: this.model.password
+    });
+  }
+
   googleLogin() {
     this.af.auth.login({
       provider: AuthProviders.Google,
