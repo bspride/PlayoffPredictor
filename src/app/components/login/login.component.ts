@@ -3,7 +3,7 @@ import { AngularFire, AuthProviders, AuthMethods } from 'angularfire2';
 
 @Component({
   selector: 'login',
-  templateUrl: './login.html'
+  templateUrl: './login.component.html'
 })
 export class LoginComponent {
   constructor(public af: AngularFire) {}
